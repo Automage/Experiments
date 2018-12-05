@@ -22,7 +22,7 @@ public class PolarPlotter extends Canvas {
         polarPlotter.img = new BufferedImage(polarPlotter.WIDTH, polarPlotter.HEIGHT, BufferedImage.TYPE_INT_RGB);
 
 
-        JFrame frame = new JFrame("Fractal test");
+        JFrame frame = new JFrame("Polar Plotter");
         frame.setSize(polarPlotter.WIDTH, polarPlotter.HEIGHT);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setResizable(false);
