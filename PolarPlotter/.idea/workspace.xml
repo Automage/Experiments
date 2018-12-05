@@ -12,6 +12,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/PolarPlotter$PolarPlotter.ic" NAME="PolarPlotter Coverage Results" MODIFIED="1543989977857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1162594213">
       <usages-collector id="statistics.lifecycle.project">
@@ -25,21 +28,23 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="2" />
+          <entry key="png" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="3" />
           <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="755" />
+          <entry key="java" value="907" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="755" />
+          <entry key="JAVA" value="907" />
         </counts>
       </usages-collector>
     </session>
@@ -49,15 +54,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PolarPlotter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="138" column="8" lean-forward="true" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+            <state relative-caret-position="165">
+              <caret line="143" column="12" lean-forward="true" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1219#1448#0" expanded="true" />
                 <element signature="e#1447#1448#0" expanded="true" />
+                <element signature="method#render#0;class#PolarPlotter#0" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/2.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -108,6 +119,11 @@
             <path>
               <item name="PolarPlotter" type="b2602c69:ProjectViewProjectNode" />
               <item name="PolarPlotter" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PolarPlotter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PolarPlotter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -119,7 +135,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543989511988" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543990054980" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -162,18 +178,18 @@
       <updated>1543970052460</updated>
       <workItem from="1543970054270" duration="109000" />
       <workItem from="1543970957915" duration="584000" />
-      <workItem from="1543986943002" duration="2016000" />
+      <workItem from="1543986943002" duration="2672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2709000" />
+    <option name="totallyTimeSpent" value="3365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18012924" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18012924" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -182,7 +198,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32944608" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32944608" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39941692" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -192,6 +208,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32944608" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32956383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -209,15 +226,34 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/PolarPlotter.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/images/1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PolarPlotter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="138" column="8" lean-forward="true" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+        <state relative-caret-position="165">
+          <caret line="143" column="12" lean-forward="true" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1219#1448#0" expanded="true" />
             <element signature="e#1447#1448#0" expanded="true" />
+            <element signature="method#render#0;class#PolarPlotter#0" />
           </folding>
         </state>
       </provider>

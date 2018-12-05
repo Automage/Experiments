@@ -1,8 +1,11 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -56,7 +59,7 @@ public class PolarPlotter extends Canvas {
         System.out.println("Save image? (y/n)");
         do {
             line = s.nextLine();
-        } while(!(line.equalsIgnoreCase("y") || line.equalsIgnoreCase("n")));
+        } while (!(line.equalsIgnoreCase("y") || line.equalsIgnoreCase("n")));
 
         if (line.equalsIgnoreCase("y")) {
             polarPlotter.generateImageFile();
@@ -136,7 +139,18 @@ public class PolarPlotter extends Canvas {
 
     private void generateImageFile() {
 
-        return;
+        File file;
+        int i = 0;
+        do {
+            i++;
+            file = new File("images/" + i + ".png");
+        } while (file.exists());
+
+        try {
+            ImageIO.write(img, "png", file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
