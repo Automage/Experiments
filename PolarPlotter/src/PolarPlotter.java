@@ -118,23 +118,29 @@ public class PolarPlotter extends Canvas {
 
     private Color colorFunction() {
 
-        float hue = (float) (0.5 * Math.sin(fractalCount * 0.01) + 0.5);
+        float hue = (float) (0.5 * Math.sin(fractalCount * 0.001) + 0.5);
         return Color.getHSBColor(hue, 1, 1);
 
     }
 
     private int[] polarToCart(int fractalCount) {
 
-        double theta = fractalCount * 1;
+        double theta = fractalCount * 0.03;
         int r = (int) (150 * Math.cos(6 * theta));
 
         // cos3x Rose
         //int[] cartesian = {(int)(r*Math.cos(theta)), (int)(r*Math.sin(theta))};
 
         //Lissajous figure
-        int[] cartesian = {(int) (100 * Math.sin(theta / 18)), (int) (100 * Math.cos(theta / 20))};
+        //int[] cartesian = {(int) (100 * Math.sin(theta / 18)), (int) (100 * Math.cos(theta / 20))};
 
-        return cartesian;
+        //return cartesian;
+
+        //Hypertrochoid
+        return new int[]{
+                (int) (20 * (2 * (2.6 - 7) * Math.cos((2.6 * theta) / (2 * 0.7 - 2.6))*Math.cos(theta))),
+                (int) (20 * (2 * (2.6 - 7) * Math.cos((2.6 * theta) / (2 * 0.7 - 2.6))*Math.sin(theta)))
+        };
     }
 
     private void generateImageFile() {
