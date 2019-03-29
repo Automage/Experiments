@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <assert.h>
 
+#define HEADER_SIZE (44)
+
 int main () {
   FILE *fp = fopen("mus.wav", "rb");
   assert(fp != NULL);
 
-  //int a = 0;
-  //fread(&a, sizeof(int), 1, fp);
-
-  for (int pos = 0; pos < 44; pos++) {
+  for (int pos = 0; pos < HEADER_SIZE; pos++) {
     unsigned char byte;
     fread(&byte, 1, 1, fp);
     printf("%0x ", byte);
@@ -16,6 +15,7 @@ int main () {
 
   fseek(fp, 4, SEEK_SET);
 
+  //Endianless read
   unsigned char bytes[4];
   int sum = 0;
   while (fread(bytes, 4, 1, fp) != 0) {
