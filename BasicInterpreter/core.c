@@ -26,4 +26,6 @@ int main(int argc, char* argv[]) {
 
   fclose(fp);
   fp = NULL;
+
+  return 0;
 }
