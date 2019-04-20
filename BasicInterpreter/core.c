@@ -3,7 +3,7 @@
  */
 
 #include "core.h"
-#include "memory.h"
+#include "heap.h"
 
 #include <stdio.h>
 #include <assert.h>
