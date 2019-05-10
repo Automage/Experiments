@@ -6,7 +6,12 @@
 function recursive_list {
 	for filename in * 
 	do
-			echo $filename
+		if [ -d "$filename" ] 
+		then
+			echo "$filename (directory)"
+		else
+			echo "$filename"
+		fi
 	done
 }
 
