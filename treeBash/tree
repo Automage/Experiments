@@ -1,6 +1,10 @@
 #!/bin/bash
 
 #
+# Pranav Nair, 10/5/19
+#
+
+#
 # Lists out all files and directories in a tree. MS-DOS like.
 #
 
@@ -9,41 +13,51 @@ stems=()
 
 #
 # Draws a branch of the tree representing a file/directory.
-# @param 1 - filename
-# @param 2 - depth
-# @param 3 - isDirectory
+# @param 1 - depth
+# @param 2 - filename
 #
 
 function print_branch {
 	tab=""
-	for ((i=0; i<$2; i++))	
+	for ((i=0; i<$1; i++))	
 	do
-		tab="${tab}|    "
+		if [ ${stems[$i]} -eq 1 ]
+		then
+			tab="${tab}|  "
+		else
+			tab="${tab}   "
+		fi
 	done
-	printf "${tab}|--${1}\n"
+	
+	printf "${tab}|--${2}\n"
 }
 
 #
 # Recusively traverses all files in the current directory and calls draw_branch.
-# @param 1 - depth
 #
 
 function recursive_list {
-	files=(*)
-	echo ${#files[@]}
-	for ((j=0; j<"${#files[@]}"; j++))
+	local files=(*)
+	local j=0
+	for filename in "${files[@]}"
 	do
-		filename=${files[$j]}
+		if [ $j -eq $((${#files[@]}-1)) ]
+		then
+			stems[$depth]=0
+		else
+			stems[$depth]=1
+		fi
+		
+		((j++))
+		print_branch $depth "$filename"
+
 		if [ -d "$filename" ] 
 		then
-			print_branch "$filename" $depth 1
 			((depth++))
 			cd "$filename"
 			recursive_list 
 			cd ..
 			((depth--))
-		else
-			print_branch "$filename" $depth 0
 		fi
 	done
 }
