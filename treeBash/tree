@@ -1,18 +1,50 @@
 #!/bin/bash
 
 #
-# Lists out all files and directories in a tree. Windows-like.
+# Lists out all files and directories in a tree. MS-DOS like.
 #
+
+tree=""
+depth=0
+
+#
+# Draws a branch of the tree representing a file/directory.
+# @param 1 - filename
+# @param 2 - depth
+# @param 3 - isDirectory
+#
+
+function print_branch {
+	tab=""
+	for ((i=0; i<$2; i++))	
+	do
+		tab="${tab}   "
+	done
+	printf "${tab}|--${1}\n"
+}
+
+#
+# Recusively traverses all files in the current directory and calls draw_branch.
+# @param 1 - depth
+#
+
 function recursive_list {
 	for filename in * 
 	do
+		#append_branch "$filename" $depth
 		if [ -d "$filename" ] 
 		then
-			echo "$filename (directory)"
+			print_branch "$filename" $depth 1
+			((depth++))
+			cd "$filename"
+			recursive_list 
+			cd ..
+			((depth--))
 		else
-			echo "$filename"
+			print_branch "$filename" $depth 0
 		fi
 	done
 }
 
+echo "${PWD##*/}" #prints current directory 
 recursive_list
