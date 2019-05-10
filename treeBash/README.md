@@ -4,4 +4,3 @@ A simple bash script that lists all current files and sub-directories within the
 
 TODO:
 - Color code directories
-- Use lines to tab sub-directories
