@@ -4,8 +4,8 @@
 # Lists out all files and directories in a tree. MS-DOS like.
 #
 
-tree=""
 depth=0
+stems=()
 
 #
 # Draws a branch of the tree representing a file/directory.
@@ -30,9 +30,10 @@ function print_branch {
 
 function recursive_list {
 	files=(*)
-	for filename in "${files[@]}"
+	echo ${#files[@]}
+	for ((j=0; j<"${#files[@]}"; j++))
 	do
-		#append_branch "$filename" $depth
+		filename=${files[$j]}
 		if [ -d "$filename" ] 
 		then
 			print_branch "$filename" $depth 1
