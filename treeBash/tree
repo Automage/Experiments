@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#
+# Lists out all files and directories in a tree. Windows-like.
+#
+function recursive_list {
+	for filename in * 
+	do
+			echo $filename
+	done
+}
+
+recursive_list
