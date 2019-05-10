@@ -18,7 +18,7 @@ function print_branch {
 	tab=""
 	for ((i=0; i<$2; i++))	
 	do
-		tab="${tab}   "
+		tab="${tab}|    "
 	done
 	printf "${tab}|--${1}\n"
 }
@@ -29,7 +29,8 @@ function print_branch {
 #
 
 function recursive_list {
-	for filename in * 
+	files=(*)
+	for filename in "${files[@]}"
 	do
 		#append_branch "$filename" $depth
 		if [ -d "$filename" ] 
