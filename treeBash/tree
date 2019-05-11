@@ -62,5 +62,20 @@ function recursive_list {
 	done
 }
 
-echo "${PWD##*/}" #prints current directory 
-recursive_list
+if [ $# -eq 0 ]
+then
+	echo "${PWD##*/}" #prints current directory 
+	recursive_list
+else
+	if [ -d "$1" ]
+	then
+		temp_pwd=$PWD
+		cd "$1"
+		echo "${PWD##*/}" #prints specified directory 
+		recursive_list
+		cd "$temp_pwd"
+	else
+		echo Not a valid directory!
+		exit 1
+	fi
+fi
